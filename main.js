@@ -5,9 +5,20 @@ let inflationRate = 20
 let maxSize = 300
 let popCount = 0
 
+//getting reference from the two buttons
+let startButton = document.getElementById("start-button")
+let inflateButton = document.getElementById("inflate-button")
+
 function startGame() {
+
+  startButton.setAttribute("disabled", "true")
+  inflateButton.removeAttribute("disabled")
+
   setTimeout(() => {
     console.log("its been 3 seconds")
+
+    inflateButton.setAttribute("disabled", "true")
+    startButton.removeAttribute("disabled")
   }, 3000)
 }
 
