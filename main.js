@@ -25,6 +25,8 @@ function startGame() {
     let height = 120
     let width = 100
 
+    draw()
+
   }, 3000)
 }
 
