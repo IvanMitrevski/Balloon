@@ -14,20 +14,8 @@ function startGame() {
   startButton.setAttribute("disabled", "true")
   inflateButton.removeAttribute("disabled")
 
-  setTimeout(() => {
-    console.log("its been 3 seconds")
-
-    inflateButton.setAttribute("disabled", "true")
-    startButton.removeAttribute("disabled")
-
-    //reset the count and the size of the balloon after the 3 seconds
-    clickCount = 0
-    let height = 120
-    let width = 100
-
-    draw()
-
-  }, 3000)
+  //finish after 3000ms 
+  setTimeout(stopGame, 3000)
 }
 
 // update the date with this function
@@ -57,5 +45,20 @@ function draw() {
 
   clickCountElement.innerText = clickCount.toString()
   popCountElement.innerText = popCount.toString();
+
+}
+
+function stopGame() {
+  console.log("Game Over")
+
+  inflateButton.setAttribute("disabled", "true")
+  startButton.removeAttribute("disabled")
+
+  //reset the count and the size of the balloon after the 3 seconds
+  clickCount = 0
+  let height = 120
+  let width = 100
+
+  draw()
 
 }
