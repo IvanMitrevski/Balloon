@@ -1,3 +1,4 @@
+//DATA
 let clickCount = 0
 let height = 120
 let width = 100
@@ -6,6 +7,8 @@ let maxSize = 300
 let popCount = 0
 let gameLength = 5000
 let clockId = 0         //for stopping setInterval
+let timeRemaining = 0
+
 
 //getting reference from the two buttons
 let startButton = document.getElementById("start-button")
@@ -20,11 +23,24 @@ function startGame() {
 }
 
 function startClock() {
+  timeRemaining = gameLength
+
+  //when you start the game, you start the clock and with that you start counting the time left
+  drawClock()
+
+  //start repeating the counting every second
   clockId = setInterval(drawClock, 1000)
 }
 
 function stopClock() {
   clearInterval(clockId)
+}
+
+function drawClock() {
+  let countDownElement = document.getElementById("countdown")
+
+  countDownElement.innerText = (timeRemaining / 1000).toString() // dividing by 1000 so it shows seconds(1 instead of 1000)
+  timeRemaining -= 1000
 }
 
 // update the date with this function
