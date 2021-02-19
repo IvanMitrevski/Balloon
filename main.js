@@ -4,18 +4,27 @@ let width = 100
 let inflationRate = 20
 let maxSize = 300
 let popCount = 0
+let gameLength = 5000
+let clockId = 0         //for stopping setInterval
 
 //getting reference from the two buttons
 let startButton = document.getElementById("start-button")
 let inflateButton = document.getElementById("inflate-button")
 
 function startGame() {
-
   startButton.setAttribute("disabled", "true")
   inflateButton.removeAttribute("disabled")
+  startClock()
+  //finish after "gameLength"ms 
+  setTimeout(stopGame, gameLength)
+}
 
-  //finish after 3000ms 
-  setTimeout(stopGame, 3000)
+function startClock() {
+  clockId = setInterval(drawClock, 1000)
+}
+
+function stopClock() {
+  clearInterval(clockId)
 }
 
 // update the date with this function
@@ -58,7 +67,7 @@ function stopGame() {
   clickCount = 0
   let height = 120
   let width = 100
-
+  stopClock()
   draw()
 
 }
