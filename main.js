@@ -22,9 +22,9 @@ function startGame() {
   }, 3000)
 }
 
+// update the date with this function
 function inflate() {
   clickCount++;
-  let balloonElement = document.getElementById("balloon")
   height += inflationRate
   width += inflationRate
 
@@ -33,12 +33,21 @@ function inflate() {
     popCount++
     height = 0
     width = 0
-    document.getElementById("pop-count").innerText = popCount.toString();
   }
+
+  draw()
+}
+
+// expand the balloon and update the click-count and pop-count with this function
+function draw() {
+  let balloonElement = document.getElementById("balloon")
+  let clickCountElement = document.getElementById("click-count")
+  let popCountElement = document.getElementById("pop-count")
 
   balloonElement.style.height = height + "px"
   balloonElement.style.width = width + "px"
 
-  let clickCountElement = document.getElementById("click-count")
   clickCountElement.innerText = clickCount.toString()
+  popCountElement.innerText = popCount.toString();
+
 }
