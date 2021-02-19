@@ -19,6 +19,12 @@ function startGame() {
 
     inflateButton.setAttribute("disabled", "true")
     startButton.removeAttribute("disabled")
+
+    //reset the count and the size of the balloon after the 3 seconds
+    clickCount = 0
+    let height = 120
+    let width = 100
+
   }, 3000)
 }
 
