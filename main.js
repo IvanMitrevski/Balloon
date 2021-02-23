@@ -1,3 +1,9 @@
+//getting reference from the two buttons
+let startButton = document.getElementById("start-button")
+let inflateButton = document.getElementById("inflate-button")
+
+//#region GAME LOGIC AND DATA
+
 //DATA
 let clickCount = 0
 let height = 120
@@ -10,10 +16,6 @@ let gameLength = 5000
 let clockId = 0         //for stopping setInterval
 let timeRemaining = 0
 
-
-//getting reference from the two buttons
-let startButton = document.getElementById("start-button")
-let inflateButton = document.getElementById("inflate-button")
 
 function startGame() {
   startButton.setAttribute("disabled", "true")
@@ -97,3 +99,5 @@ function stopGame() {
   stopClock()
   draw()
 }
+
+//#endregion
