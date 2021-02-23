@@ -9,6 +9,17 @@
 </head>
 
 <body>
+
+    <!--when onsubmit fires you give the event to setPlayer func. By event means everything that happened in the form. In this form we get the name that the player has entered and we give it to the function, so the function can use it.-->
+    <form onsubmit="setPlayer(event)">
+        <div>
+            <label for="name">Player Name:</label>
+            <input type="text" name="playerName" required>
+        </div>
+
+        <button type="submit">Ok</button>
+    </form>
+
     <div>
         <button id="start-button" onclick="startGame()">START GAME</button>
     </div>

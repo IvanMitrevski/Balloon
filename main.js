@@ -4,6 +4,8 @@ let inflateButton = document.getElementById("inflate-button")
 
 //#region GAME LOGIC AND DATA
 
+
+
 //DATA
 let clickCount = 0
 let height = 120
@@ -101,3 +103,10 @@ function stopGame() {
 }
 
 //#endregion
+
+let players = []
+
+function setPlayer(event) {
+  //do this so when the form submits it wont show a 404 error page and it will not refresh the page
+  event.preventDefault()
+}
