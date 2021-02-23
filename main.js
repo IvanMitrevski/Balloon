@@ -109,4 +109,11 @@ let players = []
 function setPlayer(event) {
   //do this so when the form submits it wont show a 404 error page and it will not refresh the page
   event.preventDefault()
+
+  let form = event.target
+  let playerName = form.playerName.value
+
+  //we now have the player name inside playerName and we no longer need it
+  //so we can reset the form
+  form.reset()
 }
