@@ -127,8 +127,12 @@ function setPlayer(event) {
     currentPlayer = { name: playerName, topScore: 0 }
   }
 
-
   //we now have the player name inside playerName and we no longer need it
   //so we can reset the form
   form.reset()
+}
+
+//convert the array player to a string using stringify
+function savePlayers() {
+  window.localStorage.setItem("players", JSON.stringify(players))
 }
