@@ -106,6 +106,10 @@ function stopGame() {
 
 let players = []
 
+//you will load the saved players now, before entering a new one
+//so you dont delete them from local storage after every refresh
+loadPlayers()
+
 function setPlayer(event) {
   //do this so when the form submits it wont show a 404 error page and it will not refresh the page
   event.preventDefault()
