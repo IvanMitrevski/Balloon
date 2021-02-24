@@ -143,6 +143,9 @@ function setPlayer(event) {
   //after you submit the form you remove the class named hidden in the section with the game, after that you draw it
   document.getElementById("game").classList.remove("hidden")
 
+  //after you show the game, hide the form
+  form.classList.add("hidden")
+
   //after you set the player and reset the form, also draw the info for the 
   //current player
   draw()
