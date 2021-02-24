@@ -92,9 +92,11 @@ function stopGame() {
   let height = 120
   let width = 100
 
-  if (highestPopCount < currentPopCount) {
-    highestPopCount = currentPopCount
+  if (currentPopCount > currentPlayer.topScore) {
+    currentPlayer.topScore = currentPopCount
+    savePlayers()
   }
+
   currentPopCount = 0
 
   stopClock()
