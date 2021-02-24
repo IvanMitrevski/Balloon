@@ -4,8 +4,6 @@ let inflateButton = document.getElementById("inflate-button")
 
 //#region GAME LOGIC AND DATA
 
-
-
 //DATA
 let clickCount = 0
 let height = 120
@@ -17,6 +15,7 @@ let currentPopCount = 0
 let gameLength = 5000
 let clockId = 0         //for stopping setInterval
 let timeRemaining = 0
+let currentPlayer = {}  //declaration for an object
 
 
 function startGame() {
@@ -125,7 +124,7 @@ function setPlayer(event) {
   //return it.
   //If we dont find the typed in player name in the array, then
   //currentPlayer will be null / undefined
-  let currentPlayer = players.find(player => player.name == playerName)
+  currentPlayer = players.find(player => player.name == playerName)
 
   if (!currentPlayer) {
     currentPlayer = { name: playerName, topScore: 0 }
