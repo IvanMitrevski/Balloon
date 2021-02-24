@@ -125,6 +125,9 @@ function setPlayer(event) {
 
   if (!currentPlayer) {
     currentPlayer = { name: playerName, topScore: 0 }
+    //js uses push insed of add to insert items in an array
+    players.push(currentPlayer)
+    savePlayers()
   }
 
   //we now have the player name inside playerName and we no longer need it
