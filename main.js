@@ -139,6 +139,10 @@ function setPlayer(event) {
   //we now have the player name inside playerName and we no longer need it
   //so we can reset the form
   form.reset()
+
+  //after you set the player and reset the form, also draw the info for the 
+  //current player
+  draw()
 }
 
 //convert the array player to a string using stringify
