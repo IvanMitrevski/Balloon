@@ -140,6 +140,9 @@ function setPlayer(event) {
   //so we can reset the form
   form.reset()
 
+  //after you submit the form you remove the class named hidden in the section with the game, after that you draw it
+  document.getElementById("game").classList.remove("hidden")
+
   //after you set the player and reset the form, also draw the info for the 
   //current player
   draw()
@@ -160,3 +163,4 @@ function loadPlayers() {
   }
 
 }
+

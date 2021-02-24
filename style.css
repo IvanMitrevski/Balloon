@@ -8,3 +8,7 @@ body{
   background-color: rgb(75, 132, 67);
   border-radius: 50%;
 }
+
+.hidden{
+  display: none;
+}
