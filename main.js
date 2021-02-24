@@ -151,6 +151,11 @@ function setPlayer(event) {
   draw()
 }
 
+function changePlayer() {
+  document.getElementById("player-form").classList.remove("hidden")
+  document.getElementById("game").classList.add("hidden")
+}
+
 //convert the array player to a string using stringify
 function savePlayers() {
   window.localStorage.setItem("players", JSON.stringify(players))
