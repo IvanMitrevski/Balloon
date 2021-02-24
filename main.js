@@ -77,7 +77,7 @@ function draw() {
 
   clickCountElement.innerText = clickCount.toString()
   popCountElement.innerText = currentPopCount.toString();
-  highPopCountElement.innerText = highestPopCount.toString();
+  highPopCountElement.innerText = currentPlayer.topScore.toString();
 
 }
 
@@ -92,6 +92,7 @@ function stopGame() {
   let height = 120
   let width = 100
 
+  //Update the score for each individual player
   if (currentPopCount > currentPlayer.topScore) {
     currentPlayer.topScore = currentPopCount
     savePlayers()
