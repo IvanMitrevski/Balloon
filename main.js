@@ -136,3 +136,14 @@ function setPlayer(event) {
 function savePlayers() {
   window.localStorage.setItem("players", JSON.stringify(players))
 }
+
+function loadPlayers() {
+  //if we pull something from the local storage then insert it in playerData.
+  //If not the function will be ignored
+  let playersData = JSON.parse(window.localStorage.getItem("players"))
+
+  if (playersData) {
+    players = playersData
+  }
+
+}
