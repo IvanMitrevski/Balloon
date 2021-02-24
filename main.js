@@ -111,7 +111,22 @@ function setPlayer(event) {
   event.preventDefault()
 
   let form = event.target
+  //in playerName you will store the value(name) that the 
+  //player will insert in the input element
   let playerName = form.playerName.value
+
+  //this lambda expression will loop thru the array and will compare 
+  //every individual player and their name with the name(playerName) that
+  //we actually typed in the form. And the .find() finds someone it will 
+  //return it.
+  //If we dont find the typed in player name in the array, then
+  //currentPlayer will be null / undefined
+  let currentPlayer = players.find(player => player.name == playerName)
+
+  if (!currentPlayer) {
+    currentPlayer = { name: playerName, topScore: 0 }
+  }
+
 
   //we now have the player name inside playerName and we no longer need it
   //so we can reset the form
