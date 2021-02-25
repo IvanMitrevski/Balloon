@@ -18,28 +18,25 @@ body{
   margin: 3em 0;
 }
 
-.logo-container{
-  width: 50%;
-  margin: auto;
-  filter: drop-shadow(var(--shadow));
-}
-
-main{
-  width: 50%;
-  margin: auto;
-}
-
 /*every single image will not spill outside the bounds of whatever the parent container is. (in this case that container is .logo-container) */
 img{
   max-width: 100%;
 }
-
 
 .balloon{
   height: 120px;
   width: 100px;
   background-color: rgb(75, 132, 67);
   border-radius: 50%;
+}
+
+.container{
+  width: 50%;
+  margin: auto;
+}
+
+.shadow{
+  filter: drop-shadow(var(--shadow));
 }
 
 .card{
