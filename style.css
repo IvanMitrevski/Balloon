@@ -1,6 +1,7 @@
 
 :root{
   --primary: #f393fd;
+  --primary-darken: #ce5ddab3;
   --bg: #d8d2d2;
   --shadow: 2px 5px 12px rgba(0, 0, 0, 0.301);
   --corners: 5px;
@@ -33,6 +34,22 @@ img{
   width: 100px;
   background-color: rgb(75, 132, 67);
   border-radius: 50%;
+  transition: all .2s ease;
+}
+
+button{
+  background-color: var(--primary);
+  color:var(--light-color);
+  border: 1px solid var(--primary-darken);
+  border-radius: var(--corners);
+  box-shadow: var(--shadow);
+  text-transform: uppercase;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: var(--primary-darken);
 }
 
 .container{
@@ -52,6 +69,15 @@ img{
   border-radius: var(--corners);
 }
 
+.d-flex{
+  display: flex;
+}
+
+/*Space-between will only work if the display is flex, because justify-content works only with flexed items.
+If the container has d-flex and space-between as classes then this thing below will have an effect*/
+.d-flex.space-between{
+  justify-content: space-between;
+}
 
 .hidden{
   display: none !important; /* try not to use important in css */ 
