@@ -29,6 +29,18 @@ img{
   max-width: 100%;
 }
 
+form{
+  margin: 0;
+}
+
+input{
+  background-color: transparent;
+  border:none;
+  border-bottom: 2px solid var(--primary-darken);
+  outline: none;
+  font-size: 14pt;
+}
+
 .balloon{
   height: 120px;
   width: 100px;
