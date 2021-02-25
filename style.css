@@ -1,16 +1,18 @@
 
 :root{
   --primary: #f393fd;
-  --bg: rgb(216, 210, 210);
+  --bg: #d8d2d2;
   --shadow: 2px 5px 12px rgba(0, 0, 0, 0.301);
   --corners: 5px;
+  --text-color: #202020; 
+  --light-color: #e7e5e5;
 }
 
 body{
   background-color: wheat;
   font-family: 'Permanent Marker', cursive;
   font-size: 16pt;
-  color: rgb(32, 32, 32);
+  color: var(--text-color);
 }
 
 .header{
@@ -43,7 +45,7 @@ img{
 }
 
 .card{
-  background-color: whitesmoke;
+  background-color: var(--light-color);
   padding: 1em;
   /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
   box-shadow: var(--shadow);
