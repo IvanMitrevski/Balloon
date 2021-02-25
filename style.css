@@ -8,6 +8,9 @@
 
 body{
   background-color: wheat;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 16pt;
+  color: rgb(32, 32, 32);
 }
 
 .header{
