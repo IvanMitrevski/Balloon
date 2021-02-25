@@ -2,6 +2,25 @@ body{
   background-color: wheat;
 }
 
+.header{
+/*If the margin property has two values:
+  margin: 3em 0;
+  top and bottom margins are 3em
+  right and left margins are 0 or default value*/
+  margin: 3em 0;
+}
+
+.logo-container{
+  width: 50%;
+  margin: auto;
+}
+
+/*every single image will not spill outside the bounds of whatever the parent container is. (in this case that container is .logo-container) */
+img{
+  max-width: 100%;
+}
+
+
 .balloon{
   height: 120px;
   width: 100px;
