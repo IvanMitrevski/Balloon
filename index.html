@@ -16,48 +16,53 @@
         </div>
     </header>
 
-    <!--when onsubmit fires you give the event to setPlayer func. By event means everything that happened in the form. In this form we get the name that the player has entered and we give it to the function, so the function can use it.-->
-    <form id="player-form" class="card" onsubmit="setPlayer(event)">
-        <div>
-            <label for="name">Player Name:</label>
-            <input type="text" name="playerName" required>
-        </div>
+    <main class="card">
 
-        <button type="submit">Ok</button>
-    </form>
+        <!--when onsubmit fires you give the event to setPlayer func. By event means everything that happened in the form. In this form we get the name that the player has entered and we give it to the function, so the function can use it.-->
+        <form id="player-form" onsubmit="setPlayer(event)">
+            <div>
+                <label for="name">Player Name:</label>
+                <input type="text" name="playerName" required>
+            </div>
 
-    <section id="game" class="game hidden">
-        <div>
-            <button onclick="changePlayer()">Change Player</button>
-        </div>
-
-        <div>
-            <button id="start-button" onclick="startGame()">START GAME</button>
-        </div>
+            <button type="submit">Ok</button>
+        </form>
 
 
-        <button id="inflate-button" onclick="inflate()" disabled="true">
-            Inflate
-            <span id="click-count"></span>
-        </button>
 
-        <div>
-            <span>Balloons popped: </span>
-            <span id="pop-count">0</span>
-        </div>
+        <section id="game" class="game hidden">
+            <div>
+                <button onclick="changePlayer()">Change Player</button>
+            </div>
 
-        <div>
-            <span>High Score: </span>
-            <span id="high-pop-count">0</span>
-        </div>
+            <div>
+                <button id="start-button" onclick="startGame()">START GAME</button>
+            </div>
 
-        <div>
-            <span>Time Remaining: </span>
-            <span id="countdown">0</span>
-        </div>
 
-        <div id="balloon" class="balloon"></div>
-    </section>
+            <button id="inflate-button" onclick="inflate()" disabled="true">
+                Inflate
+                <span id="click-count"></span>
+            </button>
+
+            <div>
+                <span>Balloons popped: </span>
+                <span id="pop-count">0</span>
+            </div>
+
+            <div>
+                <span>High Score: </span>
+                <span id="high-pop-count">0</span>
+            </div>
+
+            <div>
+                <span>Time Remaining: </span>
+                <span id="countdown">0</span>
+            </div>
+
+            <div id="balloon" class="balloon"></div>
+        </section>
+    </main>
 
     <script src="main.js"></script>
 </body>

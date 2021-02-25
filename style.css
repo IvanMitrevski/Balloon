@@ -1,3 +1,11 @@
+
+:root{
+  --primary: #f393fd;
+  --bg: rgb(216, 210, 210);
+  --shadow: 2px 5px 12px rgba(0, 0, 0, 0.301);
+  --corners: 5px;
+}
+
 body{
   background-color: wheat;
 }
@@ -11,6 +19,12 @@ body{
 }
 
 .logo-container{
+  width: 50%;
+  margin: auto;
+  filter: drop-shadow(var(--shadow));
+}
+
+main{
   width: 50%;
   margin: auto;
 }
@@ -32,7 +46,8 @@ img{
   background-color: whitesmoke;
   padding: 1em;
   /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
-  box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.157);
+  box-shadow: var(--shadow);
+  border-radius: var(--corners);
 }
 
 
