@@ -9,6 +9,14 @@ body{
   border-radius: 50%;
 }
 
+.card{
+  background-color: whitesmoke;
+  padding: 1em;
+  /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
+  box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.157);
+}
+
+
 .hidden{
   display: none !important; /* try not to use important in css */ 
 }
