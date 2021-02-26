@@ -71,6 +71,7 @@ function draw() {
   let clickCountElement = document.getElementById("click-count")
   let popCountElement = document.getElementById("pop-count")
   let highPopCountElement = document.getElementById("high-pop-count")
+  let playerNameElement = document.getElementById("player-name")
 
   balloonElement.style.height = height + "px"
   balloonElement.style.width = width + "px"
@@ -78,6 +79,7 @@ function draw() {
   clickCountElement.innerText = clickCount.toString()
   popCountElement.innerText = currentPopCount.toString();
   highPopCountElement.innerText = currentPlayer.topScore.toString();
+  playerNameElement.innerText = currentPlayer.name;
 
 }
 

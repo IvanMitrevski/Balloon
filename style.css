@@ -6,6 +6,7 @@
   --shadow: 2px 5px 12px rgba(0, 0, 0, 0.301);
   --corners: 5px;
   --text-color: #202020; 
+  --dark-color: #202022; 
   --light-color: #e7e5e5;
 }
 
@@ -73,12 +74,22 @@ button:hover{
   filter: drop-shadow(var(--shadow));
 }
 
+
+
 .card{
   background-color: var(--light-color);
   padding: 1em;
   /*box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit;*/
   box-shadow: var(--shadow);
   border-radius: var(--corners);
+}
+
+.bg-dark{
+  background-color: var(--dark-color)
+}
+
+.text-light{
+  color: var(--light-color)
 }
 
 .d-flex{
