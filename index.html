@@ -16,6 +16,14 @@
 </head>
 
 <body>
+    <!--
+            Font Awesome 4.7 version
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+        -->
+    <!--
+            Font Awesome 5 version:
+            <i class="far fa-user"></i>
+        -->
 
     <header class="header">
         <div class="shadow container">
@@ -24,24 +32,24 @@
     </header>
 
     <main class="container card">
-        <!--Font Awesome 4.7 version-->
-        <i class="fa fa-user-o" aria-hidden="true"></i>
-        <!--Font Awesome 5 version-->
-        <i class="far fa-user"></i>
+
 
         <!--when onsubmit fires you give the event to setPlayer func. By event means everything that happened in the form. In this form we get the name that the player has entered and we give it to the function, so the function can use it.-->
         <form id="player-form" class="d-flex space-between" onsubmit="setPlayer(event)">
             <div>
-                <label for="name">Player Name:</label>
+                <label for="name">
+                    <i class="far fa-user"></i>
+                    <span>Player Name:</span>
+                </label>
                 <input type="text" name="playerName" required>
             </div>
 
             <button type="submit">Ok</button>
         </form>
 
+        <!--TODO replace hidden class-->
 
-
-        <section id="game" class="game hidden">
+        <section id="game" class="game  ">
             <div>
                 <button onclick="changePlayer()">Change Player</button>
             </div>
