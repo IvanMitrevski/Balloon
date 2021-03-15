@@ -43,11 +43,17 @@ input{
   font-size: 14pt;
 }
 
+/*making the container tall enough so that we can pop the balloon without any other items to move*/
+.game-container{
+  height: 310px;
+}
+
 .pump{
   margin-top: 80px;
   height: 130px;
   width: 180px;
   position: relative;
+  align-self: flex-end;
 }
 
 .handle{
