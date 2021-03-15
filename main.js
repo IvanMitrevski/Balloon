@@ -1,6 +1,3 @@
-//getting reference from the two buttons
-let startButton = document.getElementById("start-button")
-let inflateButton = document.getElementById("inflate-button")
 
 //#region GAME LOGIC AND DATA
 
@@ -19,8 +16,10 @@ let currentPlayer = {}  //declaration for an object
 
 
 function startGame() {
-  startButton.setAttribute("disabled", "true")
-  inflateButton.removeAttribute("disabled")
+  //add a hidden class to the main controls when the game starts and remove the hidden class from the game controls
+  document.getElementById("game-controls").classList.remove("hidden");
+  document.getElementById("main-controls").classList.add("hidden");
+
   startClock()
   //finish after "gameLength"ms 
   setTimeout(stopGame, gameLength)
@@ -86,8 +85,9 @@ function draw() {
 function stopGame() {
   console.log("Game Over")
 
-  inflateButton.setAttribute("disabled", "true")
-  startButton.removeAttribute("disabled")
+  //add a hidden class to the game controls when the game ends and remove the hidden class from the main controls
+  document.getElementById("game-controls").classList.add("hidden");
+  document.getElementById("main-controls").classList.remove("hidden");
 
   //reset the count and the size of the balloon after the 3 seconds
   clickCount = 0
