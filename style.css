@@ -114,6 +114,20 @@ we will move the handle top*/
   /* 0 for top and bottom and auto for left and right*/
   margin: 0 auto;
   box-shadow: inset -10px -10px 12px rgba(0, 0, 0, 0.3);
+background: linear-gradient(129deg, rgba(202,252,69,1) 0%, rgba(158,253,29,1) 50%, rgba(63,180,58,1) 100%);
+}
+
+.balloon.blue{
+  filter: hue-rotate(120deg);
+}
+.balloon.pink{
+  filter: hue-rotate(175deg);
+}
+.balloon.red{
+  filter: hue-rotate(280deg);
+}
+.balloon.yellow{
+  filter: hue-rotate(320deg);
 }
 
 @keyframes balloon-float{

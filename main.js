@@ -13,7 +13,8 @@ let gameLength = 5000
 let clockId = 0         //for stopping setInterval
 let timeRemaining = 0
 let currentPlayer = {}  //declaration for an object
-
+let currentColor = "green"
+let possibleColors = ["green", "red", "blue", "yellow", "pink"]
 
 function startGame() {
   //add a hidden class to the main controls when the game starts and remove the hidden class from the game controls
@@ -53,13 +54,23 @@ function inflate() {
   width += inflationRate
 
   if (height >= maxSize) {
-    console.log("pop the balloon")
+    let balloonElement = document.getElementById("balloon")
+    balloonElement.classList.remove(currentColor)
+    getRandomColor()
+    balloonElement.classList.add(currentColor)
     currentPopCount++
     height = 0
     width = 0
   }
 
   draw()
+}
+
+function getRandomColor() {
+
+  //Math.floor to round it down
+  let i = Math.floor(Math.random() * possibleColors.length);
+  currentColor = possibleColors[i];
 }
 
 //expand the balloon
