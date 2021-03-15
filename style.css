@@ -44,6 +44,7 @@ input{
 }
 
 .pump{
+  margin-top: 80px;
   height: 130px;
   width: 180px;
   position: relative;
@@ -54,10 +55,12 @@ input{
   width: 80px;
   background-color: var(--dark-lighten);
   position:absolute;
-  top: 0;
-  left: 0;
+  top: -80px;
+  left: 50px;
   display: flex;
   justify-content: center;
+  transition: all .05s linear;
+  z-index: 1;
 }
 
 .handle::before{
@@ -66,6 +69,23 @@ input{
   width: 10px;
   height: 80px;
   display: block;
+}
+
+/*whenever we set the pump to active(we click on the pump-box) 
+we will move the handle top*/
+.pump:active .handle{
+  top: -20px;
+}
+
+.pump-box{
+  background-color: var(--primary);
+  height: 130px;
+  width: 180px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 2;
+  /*z-index will work only if the element is absolute or fixed*/
+  position: absolute;
 }
 
 .balloon{
