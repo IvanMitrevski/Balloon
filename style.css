@@ -1,7 +1,7 @@
 
 :root{
   --primary: #f393fd;
-  --primary-darken: #a93fb5b3;
+  --primary-darken: #ec9bf5b3;
   --bg: #d8d2d2;
   --shadow: 2px 5px 12px rgba(0, 0, 0, 0.301);
   --corners: 5px;
@@ -86,6 +86,15 @@ we will move the handle top*/
   z-index: 2;
   /*z-index will work only if the element is absolute or fixed*/
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.pump-box span{
+  background-color:#c21ed8dc;
+  padding: .5em;
 }
 
 .balloon{
