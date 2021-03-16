@@ -63,6 +63,8 @@ function checkBalloonPop() {
     getRandomColor()
     balloonElement.classList.add(currentColor)
 
+    document.getElementById("pop-sound").play()
+
     currentPopCount++
     height = 40
     width = 0
