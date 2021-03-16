@@ -35,7 +35,7 @@
 
 
         <!--when onsubmit fires you give the event to setPlayer func. By event means everything that happened in the form. In this form we get the name that the player has entered and we give it to the function, so the function can use it.-->
-        <form id="player-form" class="d-flex space-between hidden" onsubmit="setPlayer(event)">
+        <form id="player-form" class="d-flex space-between" onsubmit="setPlayer(event)">
             <div>
                 <label for="name">
                     <i class="far fa-user"></i>
@@ -47,8 +47,7 @@
             <button type="submit">Ok</button>
         </form>
 
-        <!--TODO replace hidden class-->
-        <section id="game" class="game">
+        <section id="game" class="game hidden">
 
             <div class="card bg-dark text-light">
                 <div class="d-flex space-between">
@@ -64,13 +63,12 @@
                 </div>
             </div>
 
-            <div id="main-controls" class="d-flex space-evenly mt-2 hidden">
+            <div id="main-controls" class="d-flex space-evenly mt-2">
                 <button class="btn-dark" onclick="changePlayer()">Change Player</button>
                 <button id="start-button" onclick="startGame()">START GAME</button>
             </div>
 
-            <!--TODO replace hidden class-->
-            <div id="game-controls" class="">
+            <div id="game-controls" class="hidden">
 
                 <div>
                     <span>Balloons popped: </span>
