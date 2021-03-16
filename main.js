@@ -20,6 +20,7 @@ function startGame() {
   //add a hidden class to the main controls when the game starts and remove the hidden class from the game controls
   document.getElementById("game-controls").classList.remove("hidden");
   document.getElementById("main-controls").classList.add("hidden");
+  document.getElementById("score-board").classList.add("hidden");
 
   startClock()
   //finish after "gameLength"ms 
@@ -104,6 +105,7 @@ function stopGame() {
   //add a hidden class to the game controls when the game ends and remove the hidden class from the main controls
   document.getElementById("game-controls").classList.add("hidden");
   document.getElementById("main-controls").classList.remove("hidden");
+  document.getElementById("score-board").classList.remove("hidden");
 
   //reset the count and the size of the balloon after the 3 seconds
   clickCount = 0
@@ -120,6 +122,7 @@ function stopGame() {
 
   stopClock()
   draw()
+  drawScoreboard()
 }
 
 //#endregion
@@ -167,6 +170,8 @@ function setPlayer(event) {
   //after you set the player and reset the form, also draw the info for the 
   //current player
   draw()
+
+  drawScoreboard()
 }
 
 function changePlayer() {
@@ -190,3 +195,29 @@ function loadPlayers() {
 
 }
 
+/* 
+  string interpolation is replacing placeholders with values in a string literal. -> ${} like below
+ */
+function drawScoreboard() {
+  let template = ""
+
+  players.forEach(player => {
+    template += `
+    <div class="d-flex space-between">
+
+      <span>
+        <i class="fa fa-user"></i>
+        ${player.name}
+      </span>
+      
+      <span>Score: ${player.topScore}</span>
+      
+    </div>
+    `
+    /* here we use innerHTML cause we haveto input a whole block of html/the template */
+    document.getElementById("players").innerHTML = template;
+  })
+}
+
+/** when you refresh show the scoreboard */
+drawScoreboard()

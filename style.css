@@ -235,6 +235,10 @@ If the container has d-flex and space-between as classes then this thing below w
   margin-bottom: 1.5em;
 }
 
+.text-center{
+  text-align: center;
+}
+
 .hidden{
   display: none !important; /* try not to use important in css */ 
 }

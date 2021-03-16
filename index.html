@@ -33,7 +33,6 @@
 
     <main class="container card">
 
-
         <!--when onsubmit fires you give the event to setPlayer func. By event means everything that happened in the form. In this form we get the name that the player has entered and we give it to the function, so the function can use it.-->
         <form id="player-form" class="d-flex space-between" onsubmit="setPlayer(event)">
             <div>
@@ -46,6 +45,8 @@
 
             <button type="submit">Ok</button>
         </form>
+
+
 
         <section id="game" class="game hidden">
 
@@ -94,6 +95,12 @@
             </div>
         </section>
     </main>
+
+    <div id="score-board" class="container card mt-2">
+        <h3 class="text-center">Scoreboard</h3>
+        <div id="players"></div>
+
+    </div>
 
     <script src="main.js"></script>
 </body>
