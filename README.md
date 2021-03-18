@@ -1,10 +1,6 @@
-# Balloon Pop Game
+# Balloon Pop Project
 
-This project is about a game where you click on a pump and it inflates a balloon until it blows up. 
-
-The goal is to pop as many balloons as you can in a period of time.
-
-Fun little project where I implemented html, css and basic javascript.
-
-Check it out:
-https://ivanmitrevski.github.io/Balloon-Pop-Game/
+* Using HTML, CSS, and vanilla JavaScript
+* I have created a game where you click on a pump and it inflates a balloon until it pops. 
+* The goal is to pop as many balloons as you can in a period of time.
+* Live version: https://ivanmitrevski.github.io/Balloon-Pop-Game/
